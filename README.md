@@ -1,2 +1,2 @@
-# step-shot-ios
-iOS Application for step shot.
+# step-shot-iPhone
+iPhone Application for step shot.
