@@ -18,27 +18,22 @@ class ViewController: UIViewController {
         stepLabel.text = "Hello World"
         startStepCounting()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        pedometer.stopUpdates()
     }
 
     let pedometer = CMPedometer()
     @IBOutlet var stepLabel: UILabel!
-
+  
     func startStepCounting() {
-        if CMPedometer.isStepCountingAvailable() {
-            self.pedometer.startUpdates(from: Date(), withHandler: {
-                [weak self] (data: CMPedometerData?, error: NSError?) -> Void in
-                DispatchQueue.main.async(execute: {
-                    if data != nil && error == nil {
-                        self?.stepLabel.text = "step: \(data!.numberOfSteps)"
-                    }
-                })
-                } as! CMPedometerHandler)
-        }
+        pedometer.startUpdates(from: NSDate() as Date, withHandler: { (data, error) -> Void in
+            if error==nil {
+                let myStep = data!.numberOfSteps
+                self.stepLabel.text = "\(myStep) 歩"
+            }
+        })
     }
-    
 }
 
