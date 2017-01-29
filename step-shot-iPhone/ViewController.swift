@@ -37,5 +37,12 @@ class ViewController: UIViewController {
             }
         })
     }
+
+    /**
+     *  Notify shutter chance each defined number.
+     **/
+    func notifyShutterChance() {
+
+    }
 }
 
