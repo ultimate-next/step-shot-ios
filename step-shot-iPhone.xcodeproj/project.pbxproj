@@ -15,7 +15,6 @@
 		428F305D1E3D4A7B0010634F /* step_shot_iPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F305C1E3D4A7B0010634F /* step_shot_iPhoneTests.swift */; };
 		428F30681E3D4A7B0010634F /* step_shot_iPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30671E3D4A7B0010634F /* step_shot_iPhoneUITests.swift */; };
 		428F30771E3D640D0010634F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F30761E3D640D0010634F /* CoreMotion.framework */; };
-		428F30791E3D647D0010634F /* MotionActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30781E3D647D0010634F /* MotionActivityViewController.swift */; };
 		428F307B1E3D65560010634F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F307A1E3D65560010634F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 		428F30671E3D4A7B0010634F /* step_shot_iPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = step_shot_iPhoneUITests.swift; sourceTree = "<group>"; };
 		428F30691E3D4A7B0010634F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428F30761E3D640D0010634F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		428F30781E3D647D0010634F /* MotionActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionActivityViewController.swift; sourceTree = "<group>"; };
 		428F307A1E3D65560010634F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -112,7 +110,6 @@
 				428F304E1E3D4A7B0010634F /* Assets.xcassets */,
 				428F30501E3D4A7B0010634F /* LaunchScreen.storyboard */,
 				428F30531E3D4A7B0010634F /* Info.plist */,
-				428F30781E3D647D0010634F /* MotionActivityViewController.swift */,
 			);
 			path = "step-shot-iPhone";
 			sourceTree = "<group>";
@@ -212,6 +209,7 @@
 				TargetAttributes = {
 					428F30431E3D4A7B0010634F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 27FSD63YT2;
 						ProvisioningStyle = Automatic;
 					};
 					428F30571E3D4A7B0010634F = {
@@ -279,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				428F304A1E3D4A7B0010634F /* ViewController.swift in Sources */,
-				428F30791E3D647D0010634F /* MotionActivityViewController.swift in Sources */,
 				428F30481E3D4A7B0010634F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +427,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 27FSD63YT2;
 				INFOPLIST_FILE = "step-shot-iPhone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.syoko.ultimate-next.step-shot-iPhone";
@@ -442,6 +442,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 27FSD63YT2;
 				INFOPLIST_FILE = "step-shot-iPhone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.syoko.ultimate-next.step-shot-iPhone";
@@ -523,6 +526,7 @@
 				428F306E1E3D4A7B0010634F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		428F306F1E3D4A7B0010634F /* Build configuration list for PBXNativeTarget "step-shot-iPhoneTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +535,7 @@
 				428F30711E3D4A7B0010634F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		428F30721E3D4A7B0010634F /* Build configuration list for PBXNativeTarget "step-shot-iPhoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +544,7 @@
 				428F30741E3D4A7B0010634F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
