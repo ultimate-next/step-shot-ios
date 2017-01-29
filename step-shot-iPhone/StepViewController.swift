@@ -24,7 +24,7 @@ class StepViewController: UIViewController {
                         self?.stepLabel.text = "step: \(data!.numberOfSteps)"
                     }
                 })
-                } as! CMPedometerHandler)
+            } as! CMPedometerHandler)
         }
     }
 }
