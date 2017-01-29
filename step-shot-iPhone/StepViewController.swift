@@ -10,21 +10,21 @@ import Foundation
 import CoreMotion
 import UIKit
 
-class MotionActibityViewController: UIViewController {
+class StepViewController: UIViewController {
 
     let pedometer = CMPedometer()
+    @IBOutlet weak var stepLabel: UILabel!
     
     func startStepCounting() {
         if CMPedometer.isStepCountingAvailable() {
-            self.pedometer.startPedometerUpdatesFromDate(NSDate(), withHandler: {
+            self.pedometer.startUpdates(from: Date(), withHandler: {
                 [weak self] (data: CMPedometerData?, error: NSError?) -> Void in
-                // 歩数が更新されるたびに呼ばれる
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     if data != nil && error == nil {
                         self?.stepLabel.text = "step: \(data!.numberOfSteps)"
                     }
                 })
-            })
-        })
+                } as! CMPedometerHandler)
+        }
     }
 }
