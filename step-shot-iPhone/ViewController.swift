@@ -31,9 +31,15 @@ class ViewController: UIViewController {
         pedometer.startUpdates(from: NSDate() as Date, withHandler: { (data, error) -> Void in
             if error==nil {
                 let myStep = data!.numberOfSteps
+                
+                
+                
                 self.stepLabel.text = "\(myStep) 歩"
             }
         })
     }
+    
+    
+    
 }
 
