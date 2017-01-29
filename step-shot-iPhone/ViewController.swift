@@ -39,10 +39,9 @@ class ViewController: UIViewController {
     }
 
     /**
-     *  Notify shutter chance each defined number.
+     *  Send notification that shutter chance each defined number.
      **/
-    func notifyShutterChance() {
-
+    func sendShutterChanceNotification() {
     }
 }
 
