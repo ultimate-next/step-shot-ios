@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42493DF61E3D8A90002EC502 /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42493DF51E3D8A90002EC502 /* StepViewController.swift */; };
 		428F30481E3D4A7B0010634F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30471E3D4A7B0010634F /* AppDelegate.swift */; };
 		428F304A1E3D4A7B0010634F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30491E3D4A7B0010634F /* ViewController.swift */; };
 		428F304D1E3D4A7B0010634F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428F304B1E3D4A7B0010634F /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		428F305D1E3D4A7B0010634F /* step_shot_iPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F305C1E3D4A7B0010634F /* step_shot_iPhoneTests.swift */; };
 		428F30681E3D4A7B0010634F /* step_shot_iPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30671E3D4A7B0010634F /* step_shot_iPhoneUITests.swift */; };
 		428F30771E3D640D0010634F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F30761E3D640D0010634F /* CoreMotion.framework */; };
-		428F30791E3D647D0010634F /* MotionActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30781E3D647D0010634F /* MotionActivityViewController.swift */; };
 		428F307B1E3D65560010634F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F307A1E3D65560010634F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42493DF51E3D8A90002EC502 /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
 		428F30441E3D4A7B0010634F /* step-shot-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "step-shot-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		428F30471E3D4A7B0010634F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428F30491E3D4A7B0010634F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		428F30671E3D4A7B0010634F /* step_shot_iPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = step_shot_iPhoneUITests.swift; sourceTree = "<group>"; };
 		428F30691E3D4A7B0010634F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428F30761E3D640D0010634F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		428F30781E3D647D0010634F /* MotionActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionActivityViewController.swift; sourceTree = "<group>"; };
 		428F307A1E3D65560010634F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -112,7 +112,7 @@
 				428F304E1E3D4A7B0010634F /* Assets.xcassets */,
 				428F30501E3D4A7B0010634F /* LaunchScreen.storyboard */,
 				428F30531E3D4A7B0010634F /* Info.plist */,
-				428F30781E3D647D0010634F /* MotionActivityViewController.swift */,
+				42493DF51E3D8A90002EC502 /* StepViewController.swift */,
 			);
 			path = "step-shot-iPhone";
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428F304A1E3D4A7B0010634F /* ViewController.swift in Sources */,
-				428F30791E3D647D0010634F /* MotionActivityViewController.swift in Sources */,
+				42493DF61E3D8A90002EC502 /* StepViewController.swift in Sources */,
 				428F30481E3D4A7B0010634F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +523,7 @@
 				428F306E1E3D4A7B0010634F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		428F306F1E3D4A7B0010634F /* Build configuration list for PBXNativeTarget "step-shot-iPhoneTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +532,7 @@
 				428F30711E3D4A7B0010634F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		428F30721E3D4A7B0010634F /* Build configuration list for PBXNativeTarget "step-shot-iPhoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +541,7 @@
 				428F30741E3D4A7B0010634F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
