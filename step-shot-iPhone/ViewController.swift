@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
 
     /**
-     *  Send notification that shutter chance each defined number.
+     *  Send sound notification that shutter chance each defined number.
      **/
     func sendShutterChanceNotification() {
     }
