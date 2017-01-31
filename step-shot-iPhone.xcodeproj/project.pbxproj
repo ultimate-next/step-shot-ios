@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		428F30481E3D4A7B0010634F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30471E3D4A7B0010634F /* AppDelegate.swift */; };
-		428F304A1E3D4A7B0010634F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30491E3D4A7B0010634F /* ViewController.swift */; };
 		428F304D1E3D4A7B0010634F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428F304B1E3D4A7B0010634F /* Main.storyboard */; };
 		428F304F1E3D4A7B0010634F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428F304E1E3D4A7B0010634F /* Assets.xcassets */; };
 		428F30521E3D4A7B0010634F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428F30501E3D4A7B0010634F /* LaunchScreen.storyboard */; };
@@ -16,6 +15,7 @@
 		428F30681E3D4A7B0010634F /* step_shot_iPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30671E3D4A7B0010634F /* step_shot_iPhoneUITests.swift */; };
 		428F30771E3D640D0010634F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F30761E3D640D0010634F /* CoreMotion.framework */; };
 		428F307B1E3D65560010634F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F307A1E3D65560010634F /* Foundation.framework */; };
+		42F13ED11E3DF3720062F116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30491E3D4A7B0010634F /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428F304A1E3D4A7B0010634F /* ViewController.swift in Sources */,
+				42F13ED11E3DF3720062F116 /* ViewController.swift in Sources */,
 				428F30481E3D4A7B0010634F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
