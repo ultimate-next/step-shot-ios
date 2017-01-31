@@ -43,5 +43,12 @@ class ViewController: UIViewController {
      **/
     func sendShutterChanceNotification() {
     }
+
+    /**
+     * Judge notification target or not
+     * @return bool
+     */
+    func isNotificationTarget() {
+    }
 }
 
