@@ -13,6 +13,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func applicationForPushNotification(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        //forTypesは.Alertと.Soundと.Badgeがあります。
+
+        let notiSettings = UNNotificationSettings(forTypes:[.Alert,.Sound,.Badge], categories:nil)
+        application.registerUserNotificationSettings(notiSettings)
+        application.registerForRemoteNotifications()
+        return true
+    }
+    
+    //アプリがバックグラウンドに行ったときによばれるやつ
+    func applicationDidEnterBackground(application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        //ローカル通知
+        let notification = UILocalNotification()
+        //ロック中にスライドで〜〜のところの文字
+        notification.alertAction = "アプリを開く"
+        //通知の本文
+        notification.alertBody = "ごはんたべよう！"
+        //通知される時間（とりあえず10秒後に設定）
+        notification.fireDate = NSDate(timeIntervalSinceNow:10) as Date
+        //通知音
+        notification.soundName = UILocalNotificationDefaultSoundName
+        //アインコンバッジの数字
+        notification.applicationIconBadgeNumber = 1
+        //通知を識別するID
+        notification.userInfo = ["notifyID":"gohan"]
+        //通知をスケジューリング
+        application.scheduleLocalNotification(notification)
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

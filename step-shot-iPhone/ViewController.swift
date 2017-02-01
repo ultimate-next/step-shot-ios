@@ -9,10 +9,12 @@
 import UIKit
 import Foundation
 import CoreMotion
+import UserNotifications
 
 class ViewController: UIViewController {
     let pedometer = CMPedometer()
     @IBOutlet var stepLabel: UILabel!
+//    let shutterChanceMap = Dictionary(dictionaryLiteral: (_, _))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +39,12 @@ class ViewController: UIViewController {
             }
         })
     }
-
+    
     /**
      *  Send sound notification that shutter chance each defined number.
      **/
     func sendShutterChanceNotification() {
+        
     }
 
     /**
