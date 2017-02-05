@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423F238B1E46FC6000BCCFD6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 423F238A1E46FC6000BCCFD6 /* icon.png */; };
 		428F30481E3D4A7B0010634F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30471E3D4A7B0010634F /* AppDelegate.swift */; };
 		428F304A1E3D4A7B0010634F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F30491E3D4A7B0010634F /* ViewController.swift */; };
 		428F304D1E3D4A7B0010634F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428F304B1E3D4A7B0010634F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		423F238A1E46FC6000BCCFD6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		428F30441E3D4A7B0010634F /* step-shot-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "step-shot-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		428F30471E3D4A7B0010634F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428F30491E3D4A7B0010634F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		428F303B1E3D4A7B0010634F = {
 			isa = PBXGroup;
 			children = (
+				423F238A1E46FC6000BCCFD6 /* icon.png */,
 				428F30461E3D4A7B0010634F /* step-shot-iPhone */,
 				428F305B1E3D4A7B0010634F /* step-shot-iPhoneTests */,
 				428F30661E3D4A7B0010634F /* step-shot-iPhoneUITests */,
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423F238B1E46FC6000BCCFD6 /* icon.png in Resources */,
 				428F30521E3D4A7B0010634F /* LaunchScreen.storyboard in Resources */,
 				428F304F1E3D4A7B0010634F /* Assets.xcassets in Resources */,
 				428F304D1E3D4A7B0010634F /* Main.storyboard in Resources */,
