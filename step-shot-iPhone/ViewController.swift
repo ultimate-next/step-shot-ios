@@ -18,6 +18,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         stepLabel.text = "0 歩"
+        
+        prepareStepLevelMap() // 歩数のレベルアップ表を準備
         startStepCounting() // 歩数カウントの有効化
         enableNotification() // ローカル通知を使えるようにする
         enableLocationManager() // バックグラウンドで位置情報更新毎にdidUpdateLocationsイベントが呼ばれるようにする
@@ -31,12 +33,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let pedometer = CMPedometer()
     var locationManager: CLLocationManager!
     var step_count: Int = 0
+    var current_level: Int = 0
+    var step_level_map: [Int] = []
+    
     @IBOutlet var stepLabel: UILabel!
     
     /* ------------------------------
-        CoreMotion関連の処理
+        歩数関連の処理
      --------------------------------*/
 
+    func prepareStepLevelMap() {
+        for i in 1..<1000 {
+            step_level_map.append(i * 50)
+        }
+    }
+    
     func startStepCounting() {
         let now = Date()    // 現在時間
         let calendar = Calendar(identifier: .gregorian)
@@ -57,9 +68,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         })
     }
     
+    func checkStepLevelUp() -> Bool {
+        if(step_level_map[current_level] <= step_count) {
+            current_level += 1
+            return true
+        }
+        return false
+    }
 
     /* ------------------------------
-        UserNotifications関連の処理
+        ローカル通知関連の処理
      --------------------------------*/
 
     func enableNotification() {
@@ -97,7 +115,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     
     /* ------------------------------
-        CoreLocation関連の処理
+        位置情報関連の処理
      --------------------------------*/
     
     func enableLocationManager() {
@@ -128,7 +146,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 return
         }
         
-        // TODO: 現状、更新毎にローカル通知が発行されてうざいので、実際はxxx歩を達成する毎に呼ぶようにする
-        reserveNotification()
+        if checkStepLevelUp() {
+            reserveNotification()
+        }
     }
 }
