@@ -19,10 +19,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         stepLabel.text = "0 歩"
         
-        applyDateLocale() // 日付出力時のフォーマットをJSTにする
         loadCurrentLevel() // 前回終了時までに達成したレベルをロード
-        loadCurrentDate() // 前回終了時の日付をロード
-        correctCurrentLevelAndDate() //日付が変わっている場合、current_lavelを0にする
         prepareStepLevelMap() // 歩数のレベルアップ表を準備
         startStepCounting() // 歩数カウントの有効化
         enableNotification() // ローカル通知を使えるようにする
@@ -47,6 +44,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var stepLabel: UILabel!
     @IBOutlet var levelLabel: UILabel!
     
+    @IBAction func resetLevelAction() {
+        setCurrentLevel(level: 0)
+    }
     
     func setCurrentLevel(level: Int) {
         current_level = level
@@ -57,34 +57,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         歩数関連の処理
      --------------------------------*/
     
-    func applyDateLocale() {
-        dateFormatter.locale = Locale(identifier: "ja_JP")
-        dateFormatter.dateStyle = .short
-    }
-
     func loadCurrentLevel() {
         if (userDefaults.object(forKey: "StepCount") != nil) {
             setCurrentLevel(level: userDefaults.integer(forKey: "StepCount"))
         } else {
             setCurrentLevel(level: 0)
-        }
-    }
-    
-    func loadCurrentDate() {
-        print("today: \(dateFormatter.string(from: calcToday()))")
-        if (userDefaults.object(forKey: "CurrentDate") != nil) {
-            current_date = userDefaults.string(forKey: "CurrentDate")
-        } else {
-            current_date = dateFormatter.string(from: calcToday())
-        }
-    }
-    
-    func correctCurrentLevelAndDate() {
-        if(current_date != dateFormatter.string(from: calcToday())) {
-            setCurrentLevel(level: 0)
-            current_date = dateFormatter.string(from: calcToday())
-            userDefaults.set(current_level, forKey: "StepCount")
-            userDefaults.set(current_date, forKey: "CurrentDate")
         }
     }
     
@@ -197,8 +174,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print("Error: location update")
                 return
         }
-        
-        correctCurrentLevelAndDate()
         
         if checkStepLevelUp() {
             reserveNotification()
